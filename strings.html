@@ -12,7 +12,12 @@
     <title>Pailndrome Checker v1.0</title>
 </head>
 <body> <!--The Body is the area where all of the content we write will be displayed in the users browser window for them to see-->
-    <h1 id="result">Welcome to Palindrome Checker v1.0</h1> <!--This displays the desired heading at the top of the web page-->
+    <h1>Welcome to Palindrome Checker v1.0</h1> <!--This displays the desired heading at the top of the web page-->
+    <form id="formSubmit" onsubmit="return false">
+    Enter a word or phrase to test:<input type="text" id="word"/>
+    <input type="submit" onclick="check()" />
+    </form>
+    <div id="result"></div>
     <h2>Palindrome ~ a word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.</h2>
 </body>
 </html>

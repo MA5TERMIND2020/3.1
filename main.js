@@ -1,14 +1,16 @@
-/*Sets a timeout so that the web page content loads before the script is ran*/
-setTimeout(main, 1000);
 
-function main() { //Contains the logic that gets the user input and checks to see if it is a Palidrome
+check();
+
+function check() { //Contains the logic that gets the user input and checks to see if it is a Palidrome
 var string = ''; //Declare global variables
 var acceptedString = '';
 var reverseString = '';
 var array = [];
 
+
+
 while (acceptedString == '') { //Implements a loop to display a prompt for the user to input a string and then manipulates and reverses the string
-    string = prompt('Enter a word to see if it is a Palindrome');
+    string = document.getElementById("word").value
     if (string.match("^[A-Za-z]")) {
         acceptedString = string;
         acceptedString = acceptedString.toLowerCase();
@@ -26,7 +28,7 @@ while (acceptedString == '') { //Implements a loop to display a prompt for the u
         }
     }
     else {
-        alert('Error: You must input a valid string!');
+        document.getElementById("result").innerHTML = "Error: Invalid Input";
     }
 }
 

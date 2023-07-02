@@ -7,3 +7,8 @@ h2 {
     position: absolute;
     bottom: 100px;
 }
+
+div {
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+}
