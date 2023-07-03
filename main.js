@@ -19,30 +19,16 @@ while (acceptedString == '') { //Implements a loop to display a prompt for the u
         reverseString = array.reverse();
         reverseString = reverseString.join('');
         if (reverseString == acceptedString) {
-            document.getElementById("result").innerHTML = `Congratulations, ${string} is a Palindrome!`;
+            document.getElementById("result").innerHTML = `Congratulations, ${string} is a Palindrome! Refresh the page if you would like to try agin.`;
             setTimeout(playAgain, 1000);
         }
         else {
-            document.getElementById("result").innerHTML = `Sorry, ${string} is not a Palindrome.`;
+            document.getElementById("result").innerHTML = `Sorry, ${string} is not a Palindrome. Refresh the page if you would like to try agin.`;
             setTimeout(playAgain, 1000);
         }
     }
     else {
         document.getElementById("result").innerHTML = "Error: Invalid Input";
     }
-}
-
-
-function playAgain() {
-    ask = prompt('Would you like to run the Palindrome Checker again? [y/n]');
-if (ask == 'y') {
-    string = '';
-    acceptedString = '';
-    reverseString = '';
-    main()
-}
-else {
-    alert('Thank you for using Palindrome Checker v1.0')
-}
 }
 }
